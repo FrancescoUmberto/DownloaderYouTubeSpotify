@@ -1,0 +1,152 @@
+import express from 'express'
+const router = express.Router();
+import fs from 'fs';
+import ytdl from 'ytdl-core';
+
+
+router.get('/', (request, response) => {
+    response.sendFile('/Users/umbertofrancescocarolini/Desktop/PROGRAMMAZIONE/SITO_SERVER_YTSP_DOWN/youtubeDown.html');
+});
+
+router.post('/', (request, response) => {
+    const link = request.body.link;
+    ytDownload(link);
+    response.send(request.body);
+    return link;
+});
+
+function ytDownload(link) {
+    fs.writeFile('link.json', JSON.stringify(link), err => {
+        if (err) {
+            console.log(err);
+        }
+    });
+    ytdl(link).pipe(fs.createWriteStream('video.mp4'));
+    const download = ytdl(link, {quality: 'highest'});
+    download.pipe(fs.createWriteStream("video.mp4"));
+};
+
+
+function setValue(clicked_id) {
+    let formatValue = '';
+    formatValue = clicked_id;
+    console.log(formatValue);
+    return;
+};
+
+
+export default router 
+
+//INDEX ESTERNO
+
+import express from 'express'
+const app = express()
+import login from './routes/ytdl/index.js'
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use('/ytdl', login);
+
+app.listen(3000, () => {
+    console.log("partito")
+})
+
+app.get("/", (req, res) => {
+    res.sendFile('/Users/umbertofrancescocarolini/Desktop/PROGRAMMAZIONE/SITO_SERVER_YTSP_DOWN/index.html')
+})
+
+app.use(express.static('/Users/umbertofrancescocarolini/Desktop/PROGRAMMAZIONE/SITO_SERVER_YTSP_DOWN'))
+
+
+//NUOVE
+
+import http from 'http'
+const host = 'localhost';
+const port = 5500;
+import express from 'express'
+import fs from 'fs'
+const app = express();
+import path from 'path'
+
+fs.readFile('./index.html', function (err, html) {
+    if (err) {
+        throw err; 
+    }       
+    http.createServer(function(req, res) {  
+        res.writeHeader(200, {"Content-Type": "text/html"});  
+        res.write(html);  
+        res.end();  
+    }).listen(port);
+});
+app.use(express.static('/Users/umbertofrancescocarolini/Desktop/PROGRAMMAZIONE/SITO_SERVER_YTSP_DOWN/stili' + '/public'));
+
+// const requestListener = function(req, res){
+//     res.writeHead(200);
+//     res.end('/Users/umbertofrancescocarolini/Desktop/PROGRAMMAZIONE/SITO_SERVER_YTSP_DOWN/index.html');
+// }
+// const server = http.createServer(requestListener);
+// server.listen(port, host, ()=>{
+//     console.log(`Server is running on http://${host}:${port}`);
+// });
+
+
+
+//SERVER CON NODE 
+import http from 'http'
+
+
+const server = http.createServer((req, res) =>{
+    res.end("Hello!");
+});
+
+
+const host = "localhost";
+const port = 5500;
+
+server.listen(port, host, () =>{
+    console.log(`Server working on http://${host}:${port}`);
+});
+
+
+//SERVER CON EXPRESS AND APP.JS
+const http = require('http');
+const app = require('./app.js')
+
+const host = 'localhost'
+const port = 5500
+app.set(port, host);
+const server = http.createServer(app);
+
+server.listen(port, host, () =>{
+    console.log(`Server working on http://${host}:${port}`);
+});
+
+/APP.JS
+const express = require('express');
+const path = require('path')
+
+
+const app = express();
+app.get('/', function(req, res)  {
+    res.sendFile('/Users/umbertofrancescocarolini/Desktop/PROGRAMMAZIONE/SITO_SERVER_YTSP_DOWN/index.html');
+});
+app.get('/', function(req, res)  {
+    res.sendFile('/Users/umbertofrancescocarolini/Desktop/PROGRAMMAZIONE/SITO_SERVER_YTSP_DOWN/youtubeDown.html');
+});
+app.get('/', function(req, res)  {
+    res.sendFile('/Users/umbertofrancescocarolini/Desktop/PROGRAMMAZIONE/SITO_SERVER_YTSP_DOWN/spotifyDown.html');
+});
+module.exports = app;
+
+
+
+
+
+// const dowload  = new Promise((res, rej) =>{
+    //     try {
+    //         res(ytdl(link, { filter: 'audioonly' }).pipe(fs.createWriteStream('download.mp4')));
+
+    //     } catch (err){
+    //         console.log(err)
+    //     }
+
+    // })

@@ -1,0 +1,95 @@
+body{
+    background-color: #3ddc50;
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(100, 98, 98);
+}
+.title{
+    display: flex;
+    justify-content: center;
+    color: rgb(100, 98, 98);
+}
+.mainSp{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 100px;
+
+}
+.div2g{
+    background-color: #166818;
+    padding: 30px;
+    padding-top: 15px;
+    display: flex;
+    width: 300px;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.text-choice{
+    font-size: 20px;
+    color: whitesmoke;
+}
+.inputLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 7px;
+    border: none;
+    width: 250px;
+    padding: 5px;
+    font-size: 16px;
+}
+.div2gText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titleMainYt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.format, .download{
+    font-size: 10px;
+    text-transform: uppercase;
+    width: 90px;
+    padding: 15px 15px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: whitesmoke;
+    background-color: #179025;
+    border: none;
+    box-shadow: 0 1px #999;
+    border-radius: 15px;
+}
+.format{
+    width: 350px;
+    padding: 15px 10px;
+}
+.buttons-sp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 250px;
+    margin-top: 10px;
+}
+.send:active, .download:active{
+    transform: translateY(2px);
+}

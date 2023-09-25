@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content-type="text/html">
+    <link rel="stylesheet" href="/css/mainPage.css">
+</head>
+
+<body>
+    <div class="main" id="main">
+        <h1 class="title" id="title">SpotYube Downloader</h1>
+        <div class="m2" id="m2">
+            <div class="text-platform">
+                <p>Scegliere la piattaforma</p>
+            </div>
+            <div class="buttons">
+                <a href="youtubeDown.html"><button class="buttonChoice">YouTube</button></a>
+                <a href="spotifyDown.html"><button class="buttonChoice">Spotify</button></a>
+            </div>
+            <div class="formSongName">
+                <div class="formNameSong">
+                    <p class="titleForm">Oppure inserire il nome della canzone</p>
+                </div>
+                <form method="post" action="/downloadBySongName">
+                    <div class="inputSongNameDiv">
+                        <input type="text" name="songName" class="inputSongName"
+                            placeholder="nome della canzone (indicare anche l'artista)" required autofocus>
+                    </div>
+                    <div class="downloadButtonSongName">
+                        <button class="buttonDownloadSongName" type="submit" id="download"
+                            onclick="download()">Cerca</button>
+                    </div>
+                </form>
+            </div>
+            <form method="post" action="/downloadSong">
+                <div class="vertical-menu" id="vertical-menu">
+                    <ul id="songLists">
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

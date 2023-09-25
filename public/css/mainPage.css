@@ -1,0 +1,211 @@
+.title {
+    color: rgb(100, 98, 98);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(100, 98, 98);
+}
+
+body {
+    background-color: #3ddc50;
+}
+
+.main {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.m2 {
+    background-color: #166818;
+    padding: 30px;
+    padding-top: 15px;
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+
+.text-platform {
+    color: whitesmoke;
+}
+
+
+.buttonChoice,
+.buttonDownloadSongName {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    padding: 15px 15px;
+    width: 70px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: whitesmoke;
+    background-color: #179025;
+    border: none;
+    border-radius: 15px;
+    box-shadow: -0.5px 0.5px #999;
+    margin-bottom: 3px;
+}
+
+.titleForm {
+    font-size: 17px;
+    color: whitesmoke;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formNameSong {
+    display: flex;
+    justify-content: center;
+}
+
+.inputSongNameDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 7px;
+    border: none;
+    width: 250px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.downloadButtonSongName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 250px;
+    margin-top: 10px;
+}
+
+.inputSongName {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.vertical-menu {
+    display: flex;
+    flex-direction: column;
+    height: 1px;
+    width: auto;
+    overflow-y: auto;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.vertical-menu::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: thin;
+}
+
+.vertical-menu ul {
+    list-style-type: none;
+    /* Remove default bullets */
+    padding: 0;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.vertical-menu li {
+    list-style-type: none;
+}
+
+.vertical-menu li p {
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+.vertical-menu li a {
+    display: block;
+    /* Make the links fill the entire list item */
+    padding: 8px 16px;
+    /* Add some padding */
+    text-decoration: none;
+    /* Remove underline */
+    color: whitesmoke;
+    /* Set link color */
+}
+
+.songTitle {
+    font-weight: bold;
+}
+
+.songAuthor {
+    color: gray;
+}
+
+.songThumbnail {
+    width: 13vw;
+    height: auto;
+    border-radius: 10px;
+}
+
+.singleSongContainer {
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.songThumbnailContainer {
+    height: auto;
+    margin-right: 1vw;
+}
+
+.songInfo {
+    height: 18vh;
+}
+
+
+.buttonDownloadSongNameBoh {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    font-size: 11px;
+    padding: 10px 10px;
+    width: 70px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: whitesmoke;
+    background-color: #179025;
+    border: none;
+    border-radius: 15px;
+    box-shadow: -1px 1px #999;
+}

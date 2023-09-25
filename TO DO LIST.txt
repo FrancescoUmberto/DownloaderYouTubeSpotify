@@ -1,0 +1,26 @@
+URGENTI:
+Creare funzione che salvi su json songNameOriginal + songLink per ciascuna canzone della playlist e poi uso il file json in index per scaricare ad una ad 
+una le canzoni della playlist
+
+
+
+
+1. Download mp3 instead of mp4
+2. In case of errors run this command: sudo npm i ytdl-core@https://github.com/GreepTheSheep/node-ytdl-core
+3. Se scarico highestvideo non mi da l'audio, allora è necessario scaricare audio e video separati e poi unirli insieme  
+4. Se metto il nome della canzone => mi restituisce un link youtube da cui scaricare la canzone  
+
+
+
+
+DEVO SCARICARE LE PLAYLIST!!!!!!!!!!!!!!!
+1. Leggere le canzoni della playlist;
+2. Risconoscere se il link è di una playlist o di una canzone;
+3. Capire come scaricarle una alla volta;
+
+
+https://open.spotify.com/playlist/2ksIcEo7xhZRFV09rd3ZUZ?si=1e5afa6f7b21427f&pt=8d5dbc3a22dc7a376c9fd68666bcd0fa
+https://open.spotify.com/track/7GVUmCP00eSsqc4tzj1sDD?si=d67eceddbc7a4cee
+
+
+Se uso ffmpeg -i input.mp3 -codec:a libmp3lame -qscale:a 2 output.mp3 allora mi fa l'encoding e funziona anche su apple devices

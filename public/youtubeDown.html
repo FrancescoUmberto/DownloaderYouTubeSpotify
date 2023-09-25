@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/ytDown.css">
+
+</head>
+
+<body>
+    <script src="/Users/umbertofrancescocarolini/Desktop/PROGRAMMAZIONE/SITO_SERVER_YTSP_DOWN/index.js"></script>
+    <div class="mainYt">
+        <h1 class="title" id="title"><a href="index.html">SpotYube Downloader </a> - YouTube</h1>
+        <div class="div2g">
+            <div class="div2gText">
+                <p class="text-choice">Inserire il link</p>
+            </div>
+            <div class="formYt">
+                <form class="form" method="post" action="/formYt">
+                    <div class="inputLink">
+                        <input type="text" name="link" class="inputLink" id="linkYoutube" placeholder="link"
+                            required autofocus>
+                    </div>
+                    <div class="buttons-yt">
+                        <button class="format" name="format" id="video" onclick="sendLink()">CONVERT TO MP4</button>
+                        <button type="button" onclick="download()" class="download" id="download">Download</button>
+                    </div>
+            </div>
+        </div>
+        </form>
+    </div>
+
+</body>
+<script>
+
+
+    const inputLink = document.getElementById("linkYoutube").addEventListener('focusout', (evt) => {
+        const youtubeRegex = /^https?:\/\/(?:www\.)?youtube\.com\/watch\?(?=.*v=\w+)(?:\S+)?$/;
+        const link = document.getElementById("linkYoutube").value;
+        var valid = false;
+        if (!(link == "")) {
+            if ((!link.match(youtubeRegex))) {
+                alert("Link non valido");
+                valid = false;
+            }
+            else {
+                valid = true;
+            }
+
+        }
+    });
+
+</script>
+
+</html>
