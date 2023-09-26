@@ -9,8 +9,8 @@ import fs from 'fs';
 
 
 //Replace inputFilePath and outputFilePath with the actual file paths
-const inputFilePath = '/Users/umbertofrancescocarolini/Desktop/Programmazione/SITO_SERVER_YTSP_DOWN/video.mp3';
-const outputFilePath = '/Users/umbertofrancescocarolini/Desktop/Programmazione/SITO_SERVER_YTSP_DOWN/output.mp3';
+const inputFilePath = 'SITO_SERVER_YTSP_DOWN/video.mp3';
+const outputFilePath = 'SITO_SERVER_YTSP_DOWN/output.mp3';
 
 
 

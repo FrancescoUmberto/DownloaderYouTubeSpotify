@@ -26,7 +26,7 @@ import fs from 'fs';
 
 ffmpeg.setFfmpegPath(ffmpegPath);
 const __filename = fileURLToPath(import.meta.url);
-const outputFilePath = '/Users/umbertofrancescocarolini/Desktop/Programmazione/SITO_SERVER_YTSP_DOWN/';
+const outputFilePath = '';
 app.use(express.json()); //Accept data in json format
 app.use(express.urlencoded()); //Decode the data send through html form
 app.use(express.static('public'));
@@ -34,19 +34,19 @@ app.use(express.static(path.join('public')));
 
 
 app.get((req, res) => {
-    res.sendFile('/Users/umbertofrancescocarolini/Desktop/PROGRAMMAZIONE/SITO_SERVER_YTSP_DOWN/public/index.html');
+    res.sendFile('public/index.html');
 });
 app.get('/formSp', (req, res) => {
-    res.sendFile(path.join('/Users/umbertofrancescocarolini/Desktop/Programmazione/SITO_SERVER_YTSP_DOWN/public/spotifyDown.html'));
+    res.sendFile(path.join('public/spotifyDown.html'));
 });
 app.get('/formYt', (req, res) => {
-    res.sendFile(path.join('/Users/umbertofrancescocarolini/Desktop/Programmazione/SITO_SERVER_YTSP_DOWN/public/youtubeDown.html'));
+    res.sendFile(path.join('public/youtubeDown.html'));
 });
 app.get('/downloadBySongName', async (req, res) => {
-    res.sendFile(path.join('/Users/umbertofrancescocarolini/Desktop/Programmazione/SITO_SERVER_YTSP_DOWN/public/index.html'));
+    res.sendFile(path.join('public/index.html'));
 });
 app.get('/downloadSong', async (req, res) => {
-    res.sendFile(path.join('/Users/umbertofrancescocarolini/Desktop/Programmazione/SITO_SERVER_YTSP_DOWN/public/index.html'));
+    res.sendFile(path.join('public/index.html'));
 });
 //YT downloader
 app.post('/formYt', async (req, res) => {
@@ -184,7 +184,7 @@ app.post('/downloadBySongName', async (req, res) => {
         var songLinks = searchResult[1];
         var thumbnailUrls = searchResult[2];
         var songAuthors = searchResult[3];
-        fs.readFile('/Users/umbertofrancescocarolini/Desktop/Programmazione/SITO_SERVER_YTSP_DOWN/public/index.html', 'utf8', function (err, data) {
+        fs.readFile('public/index.html', 'utf8', function (err, data) {
             if (err) throw err;
             var root = parse(data);
             const body = root.getElementById('vertical-menu')

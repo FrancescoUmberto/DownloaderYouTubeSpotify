@@ -103,13 +103,13 @@ export async function searchSong(songName) {
 
 //Function still not used/ended
 function ytDownload(link) {
-    fs.readFile('/Users/umbertofrancescocarolini/Desktop/PROGRAMMAZIONE/SITO_SERVER_YTSP_DOWN/link.json', function (err, data) {
+    fs.readFile('SITO_SERVER_YTSP_DOWN/link.json', function (err, data) {
         if (err) {
             console.log(err);
         }
         let links = JSON.parse(data);
         links.push(link);
-        fs.writeFile('/Users/umbertofrancescocarolini/Desktop/PROGRAMMAZIONE/SITO_SERVER_YTSP_DOWN/link.json', JSON.stringify(links), function (err) {
+        fs.writeFile('SITO_SERVER_YTSP_DOWN/link.json', JSON.stringify(links), function (err) {
             if (err) {
                 console.log(err);
             }
